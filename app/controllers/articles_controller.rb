@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
     #strong params required
     @article = Article.new(params.require(:article).permit(:title, :description))
       if @article.save
+        flash[:notice] = "Article was created successfully."
         redirect_to @article
       else
         render 'new'
