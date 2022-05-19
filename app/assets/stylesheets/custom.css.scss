@@ -1,5 +1,8 @@
 @import "bootstrap/dist/css/bootstrap";
 
+html, body {
+  height:100%;
+}
 .navbar {
   background-color: black !important;
 }
@@ -26,3 +29,13 @@
   background-size: cover;
   height: 400%;
 }
+
+#page-content {
+  flex: 1 0 auto;
+  background: #666666;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
