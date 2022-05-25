@@ -22,7 +22,7 @@
           <%=f.password_field :password, class: "form-control shadow rounded", placeholder: "Choose a password" %>
         </div>
       </div>
-        <%= f.submit "Sign Up", class: "btn btn-outline-light btn-lg mt-3" %>
+        <%= f.submit(@user.new_record? ? "Sign Up" : "Update Account", class: "btn btn-outline-light btn-lg mt-3") %>
     <% end %>
     <%= link_to '[ Return to articles ]', articles_path, class: "text-info" %>
   </div>
