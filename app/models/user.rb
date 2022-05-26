@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
   # before saving record to the database
-  before_save { self.email = email.downcase! }
+  before_save { self.email = email.downcase }
 
   # associations
   has_many :articles
