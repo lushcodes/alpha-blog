@@ -4,7 +4,7 @@ class User < ApplicationRecord
   before_save { self.email = email.downcase }
 
   # associations
-  has_many :articles
+  has_many :articles, dependent: :destroy
 
   # validations
   validates :username, presence: true,
